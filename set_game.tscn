@@ -1,0 +1,174 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2fh6gk5xnf15"]
+
+[ext_resource type="Script" path="res://SetGame.gd" id="1_51g3p"]
+[ext_resource type="Theme" uid="uid://dl2n2oduldili" path="res://new_theme.tres" id="1_rjyyj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
+theme = ExtResource("1_rjyyj")
+script = ExtResource("1_51g3p")
+metadata/_edit_vertical_guides_ = [0.0]
+
+[node name="Sidebar" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -528.0
+offset_top = -244.0
+offset_right = -296.0
+offset_bottom = -18.0
+
+[node name="AutoPick" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Auto Pick"
+
+[node name="ResetGrid" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Reset Grid"
+
+[node name="ResetConstraints" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Reset Constraints"
+
+[node name="Undo" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Undo"
+
+[node name="Redo" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Redo"
+
+[node name="WFC" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "WFC"
+
+[node name="Add Result" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Add Result"
+
+[node name="GeneratePuzzle" type="Button" parent="Sidebar"]
+layout_mode = 2
+text = "Generate Puzzle"
+
+[node name="ColConstraints" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -244.0
+offset_top = -296.0
+offset_right = 244.0
+offset_bottom = -259.0
+alignment = 1
+
+[node name="Label0" type="Label" parent="ColConstraints"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "cons"
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="ColConstraints"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "cons"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ColConstraints"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "cons"
+horizontal_alignment = 1
+
+[node name="RowConstraints" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = -244.0
+offset_right = 784.0
+offset_bottom = -207.0
+rotation = -4.71238
+alignment = 1
+
+[node name="Label0" type="Label" parent="RowConstraints"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "cons"
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="RowConstraints"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "cons"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="RowConstraints"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "cons"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button0" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy
+lmao"
+
+[node name="Button1" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button2" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button3" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button4" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button5" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button6" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button7" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[node name="Button8" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+text = "ayy"
+
+[connection signal="pressed" from="Sidebar/AutoPick" to="." method="pick_lowest_entropy"]
+[connection signal="pressed" from="Sidebar/ResetGrid" to="." method="reset_grid"]
+[connection signal="pressed" from="Sidebar/ResetConstraints" to="." method="reset_constraints"]
+[connection signal="pressed" from="Sidebar/Undo" to="." method="undo"]
+[connection signal="pressed" from="Sidebar/Redo" to="." method="redo"]
+[connection signal="pressed" from="Sidebar/WFC" to="." method="wfc"]
+[connection signal="pressed" from="Sidebar/Add Result" to="." method="add_result"]
+[connection signal="pressed" from="Sidebar/GeneratePuzzle" to="." method="generate_puzzle"]
